@@ -8,11 +8,17 @@ const addUpTo = (n) => {
     return total;
   }
 
+  // n additions and n assignments
+
   console.log(addUpTo(6))
 
 
 const addUpToMathy = (n) => {
     return n * (n + 1) / 2;
 }
+
+// this one is way faster than the first
+// only three operations regardless of the value of n
+
 
 console.log(addUpToMathy(6))
