@@ -76,4 +76,6 @@ const charCount = (str) => {
     return obj
 }
 
+// this is using character codes ^
+
 console.log(charCount("Hello hi!"))
