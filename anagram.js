@@ -4,6 +4,8 @@
 // if contents of str1 are equal to str2, return true
 // if not, false
 
+//FREQUENCY COUNTER EXAMPLE
+
 const validAnagram = (first, second) => {
   if (first.length !== second.length) {
     return false;
