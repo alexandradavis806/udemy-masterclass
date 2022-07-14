@@ -96,22 +96,28 @@ console.log(areThereDuplicates(1,2,2,3,4,5))
     return new Set(arguments).size !== arguments.length;
   }
 
-  // what i don't quite understand about this problem is the use of arguments. what data structure are we assuming it is?
-
 
 
   // given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pairs equals the target average. there may be more than one pair that matches the average target
 
 
-//   const averagePair = (arr, average) => {
-//     let start = 0
-//     let next = 1
-//     for (let i = 0; i < arr.length; i++) {
-//         // console.log(arr[i])
-//         for (let)
-//     }
-//     console.log(start)
-//   }
+  const averagePair = (arr, average) => {
+    // let start = 0
+    // let next = 1
+    for (let i = 0; i < arr.length; i++) {
+        // console.log(arr[i])
+        for (let j=1; j < arr.length; j++) {
+            // console.log(arr[i])
+            // console.log('I ^^^')
+            // console.log(arr[j])
+            // console.log('J ^^^')
+            if (arr[i] + arr[j] / 2 === average) {
+                return true
+            }
+        }
+    }
+    return false
+  }
 
-
-//   console.log(averagePair([1,3,3,5,6,7,10,12,19], 8))
+  // this one is O(n^2)
+  console.log(averagePair([1,3,3,5,6,7,11,12,19], 8))
