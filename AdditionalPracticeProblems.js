@@ -52,7 +52,7 @@
 //     return true;
 //   }
 
-  console.log(sameFrequency(123, 321))
+//   console.log(sameFrequency(123, 321))
 
 
   // write a function that accepts a variable number of arguments, and checks whether there are any duplicates among the arguments being passed in
@@ -61,31 +61,36 @@
 
   // frequency counter solution:
 
-//   function areThereDuplicates() {
-//     let collection = {}
-//     for(let val in arguments){
-//       collection[arguments[val]] = (collection[arguments[val]] || 0) + 1
+  function areThereDuplicates() {
+    let collection = {}
+    for(let val in arguments){
+      collection[arguments[val]] = (collection[arguments[val]] || 0) + 1
+    //   console.log(collection)
+
+    }
+    for(let key in collection){
+      if(collection[key] > 1) return true
+    }
+    // console.log(collection)
+    return false;
+  }
+
+//   function areThereDuplicates(...args) {
+//     // Two pointers
+//     args.sort((a,b) => a > b);
+//     let start = 0;
+//     let next = 1;
+//     while(next < args.length){
+//       if(args[start] === args[next]){
+//           return true
+//       }
+//       start++
+//       next++
 //     }
-//     for(let key in collection){
-//       if(collection[key] > 1) return true
-//     }
-//     return false;
+//     return false
 //   }
 
-  function areThereDuplicates(...args) {
-    // Two pointers
-    args.sort((a,b) => a > b);
-    let start = 0;
-    let next = 1;
-    while(next < args.length){
-      if(args[start] === args[next]){
-          return true
-      }
-      start++
-      next++
-    }
-    return false
-  }
+console.log(areThereDuplicates(1,2,2,3,4,5))
 
   function areThereDuplicatesOneLiner() {
     return new Set(arguments).size !== arguments.length;
@@ -97,7 +102,16 @@
 
   // given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average of the pairs equals the target average. there may be more than one pair that matches the average target
 
-  
-  const averagePair = () => {
 
-  }
+//   const averagePair = (arr, average) => {
+//     let start = 0
+//     let next = 1
+//     for (let i = 0; i < arr.length; i++) {
+//         // console.log(arr[i])
+//         for (let)
+//     }
+//     console.log(start)
+//   }
+
+
+//   console.log(averagePair([1,3,3,5,6,7,10,12,19], 8))
