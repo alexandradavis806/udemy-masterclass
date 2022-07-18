@@ -143,3 +143,26 @@ const isSubsequence = (str1, str2) => {
 };
 
 console.log(isSubsequence("abc", "acb"));
+
+
+// given an array of integers and a number, write a function called maxSubarraySum, which finds the max sum of a subarray with the length of the number passed to the function 
+
+const maxSubarraySum = (arr, num) => {
+    let tempSum = 0
+    let maxSum = 0
+    if (arr.length < num){
+        return null
+    }
+
+    for (let i=0; i < num; i++){
+        maxSum += arr[i]
+    }
+    tempSum = maxSum
+    for (let i = num; i < arr.length; i++){
+        tempSum = tempSum - arr[i-num] + arr[i]
+        maxSum = Math.max(tempSum, maxSum)
+    }
+    return maxSum
+}
+
+console.log(maxSubarraySum([100,200,300,400], 2))

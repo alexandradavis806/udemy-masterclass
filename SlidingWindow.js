@@ -13,13 +13,25 @@ const maxSubarraySum = (arr, num) => {
     }
     for (let i = 0; i < num; i++){
         maxSum += arr[i]
+        // console.log(arr[i])
+        // console.log('array at i ^')
+        // console.log(maxSum)
+        // console.log('max sum^')
     }
     tempSum = maxSum;
+    // console.log(tempSum)
     for (let i = num; i < arr.length; i++){
         tempSum = tempSum - arr[i - num] + arr[i]
+        //temp sum is 17, we are subtracting 17 - 2 + 2 === 17
+        //second loop: temp sum 17, i === 4, 17 - arr[1] || 6 + 1 (17-6+1) === 12
+        console.log(tempSum)
+        console.log('temp sum ^')
+        // console.log(arr[i])
+        // console.log('arr at i')
+        // console.log(maxSum)
         maxSum = Math.max(maxSum, tempSum)
     }
-    return maxSum
+    // return maxSum
 }
 
 console.log(maxSubarraySum([2,6,9,2,1,8,5,6,3], 3))
