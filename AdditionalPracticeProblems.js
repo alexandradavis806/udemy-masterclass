@@ -116,6 +116,18 @@ const averagePair = (arr, average) => {
 // this one is O(n^2)
 console.log(averagePair([1, 3, 3, 5, 6, 7, 11, 12, 19], 8));
 
+const averagePair2 = (arr, num) => {
+    let start = 0
+    let end = arr.length -1
+    while (start < end){
+        let avg = (arr[start]+arr[end]) / 2
+        if (avg === num) return true;
+        else if (avg < num) start ++
+        else end--
+    }
+    return false;
+}
+
 // takes in two strings and checks whether the characters in the first string form a subsequence of the characters in the second string. In other words, the function should check whether the characters in the first string appear somewhere in the second string, without their order changing
 
 const isSubsequence = (str1, str2) => {
