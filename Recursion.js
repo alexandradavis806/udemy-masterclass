@@ -13,5 +13,24 @@
 // how recursive functions work?
 
 // invoke the same function with a different input until you reach your base case
-// base case: the condition when the recursion ends - VERY IMPORTANT!
 
+//two essential parts of a recursive funct:
+// base case: the condition when the recursion ends - VERY IMPORTANT!
+// different input
+
+const countDownRec = (num) => {
+    if (num <= 0){
+        console.log('all done!')
+        return;
+    }
+    console.log(num)
+    num--
+    countDownRec(num)
+}
+
+const countDownIter = (num) => {
+    for (let i = num; i > 0; i--){
+        console.log(i)
+    }
+    console.log('all done!')
+}
