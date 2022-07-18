@@ -166,3 +166,18 @@ const maxSubarraySum = (arr, num) => {
 }
 
 console.log(maxSubarraySum([100,200,300,400], 2))
+
+
+// write a function which accepts two parameters - an array of positive integers and a positive integer. it should return the minimal length of a contiguous subarray of which the sum is greater than or equal to the integer passed to the function. if there isn't one, return 0 instead
+
+const minSubArrayLen = (arr, num) => {
+ // create a sliding door to look at 
+ // looking to find two consecuative integers, that when added are > num
+ // return a number for how many integers are needed to add up to == or > the integer 
+
+
+ //COME BACK TO
+
+}
+
+console.log(minSubArrayLen([2,3,1,2,4,3], 7))
