@@ -27,3 +27,18 @@ removing the tail:
 - set the next pointer of the new tail (the element directly before the tail) to null
 - update the tail property of the list
 - if the tail was also the head, the head removal process will occur as well
+
+removing from the middle of the list:
+- it is possible, but involves two updates:
+1) must set the removed node's preceding node's next pointer to it's following node
+2) set the removed node's following node's previous pointer to its preceding node
+
+summary of doubly linked lists:
+- they're bidirectional, meaning we can traverse in both directions
+- have pointer to single head node, which serves as the first node in the list
+- have pointer to a single tail node, which serves as the last node in the list
+- require the pointers at the tail of the list to be updated after addition to or removed of the tail
+- require the pointers of surrounding nodes to be updated after removal from the middle of the list
+
+examples of doubly linked lists:
+- browser history 
